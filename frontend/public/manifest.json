@@ -1,0 +1,24 @@
+{
+  "name": "Stewards of the Springs",
+  "short_name": "SoS",
+  "description": "Log your spring stewardship actions — works offline",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#17252A",
+  "theme_color": "#2B7A78",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

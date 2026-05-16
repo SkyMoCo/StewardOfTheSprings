@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export default function AdminDashboard() {
-  const [counts, setCounts] = useState({ springs: '-', participants: '-', logs: '-', milestones: '-' })
+  const [counts, setCounts] = useState({ springs: '-', participants: '-', logs: '-', milestones: '-', checkins: '-' })
 
   useEffect(() => {
     Promise.all([
@@ -9,21 +9,23 @@ export default function AdminDashboard() {
       fetch('/api/participants/').then(r => r.json()),
       fetch('/api/logs/').then(r => r.json()),
       fetch('/api/milestones/').then(r => r.json()),
-    ]).then(([springs, participants, logs, milestones]) => {
+      fetch('/api/checkins/').then(r => r.json()),
+    ]).then(([springs, participants, logs, milestones, checkins]) => {
       setCounts({
         springs: springs.length,
         participants: participants.length,
         logs: logs.length,
         milestones: milestones.length,
+        checkins: checkins.length,
       })
     }).catch(() => {})
   }, [])
 
   const stats = [
-    { label: 'Springs', value: counts.springs, icon: '♨️', color: 'var(--teal)' },
-    { label: 'Participants', value: counts.participants, icon: '👥', color: 'var(--green)' },
-    { label: 'Visit Logs', value: counts.logs, icon: '📋', color: '#8e44ad' },
-    { label: 'Milestones', value: counts.milestones, icon: '🏆', color: '#e67e22' },
+    { label: 'Check-ins', value: counts.checkins, icon: '✅', color: 'var(--teal)' },
+    { label: 'Springs', value: counts.springs, icon: '♨️', color: 'var(--green)' },
+    { label: 'Participants', value: counts.participants, icon: '👥', color: '#8e44ad' },
+    { label: 'Visit Logs', value: counts.logs, icon: '📋', color: '#e67e22' },
   ]
 
   return (
@@ -41,9 +43,9 @@ export default function AdminDashboard() {
       <div className="card" style={{ padding: '1.5rem' }}>
         <h2 style={{ color: 'var(--teal-dark)', marginBottom: '0.75rem', fontSize: '1.1rem' }}>Quick Links</h2>
         <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <a href="/admin/checkins" style={quickLink}>View Check-ins</a>
           <a href="/admin/springs" style={quickLink}>+ Add Spring</a>
           <a href="/admin/participants" style={quickLink}>+ Add Participant</a>
-          <a href="/admin/logs" style={quickLink}>View All Logs</a>
           <a href="/api/docs" target="_blank" rel="noreferrer" style={quickLink}>API Docs ↗</a>
         </div>
       </div>

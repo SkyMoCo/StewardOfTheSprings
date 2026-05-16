@@ -48,6 +48,7 @@ export default function AdminLayout({ children }) {
 
 const navItems = [
   { to: '/admin', label: 'Dashboard', icon: '📊' },
+  { to: '/admin/checkins', label: 'Check-ins', icon: '✅' },
   { to: '/admin/springs', label: 'Springs', icon: '♨️' },
   { to: '/admin/participants', label: 'Participants', icon: '👥' },
   { to: '/admin/logs', label: 'Visit Logs', icon: '📋' },

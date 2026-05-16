@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Solid background (full bleed for maskable) -->
+  <rect width="512" height="512" fill="#17252A"/>
+  <!-- Mountain silhouette (slightly smaller to fit safe zone) -->
+  <polygon points="256,110 400,370 112,370" fill="#2B7A78"/>
+  <!-- Snow / peak highlight -->
+  <polygon points="256,110 290,170 222,170" fill="#DEF2F1"/>
+  <!-- Hot spring pool -->
+  <ellipse cx="256" cy="380" rx="130" ry="32" fill="#3AAFA9" opacity="0.85"/>
+  <!-- Steam wisps -->
+  <path d="M212,78 Q218,60 224,78" stroke="#DEF2F1" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M250,68 Q256,50 262,68" stroke="#DEF2F1" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M288,78 Q294,60 300,78" stroke="#DEF2F1" stroke-width="9" fill="none" stroke-linecap="round" opacity="0.75"/>
+</svg>

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import Base, engine
-from routers import participants, springs, logs, milestones, admin
+from routers import participants, springs, logs, milestones, admin, checkins
 
 Base.metadata.create_all(bind=engine)
 
@@ -25,6 +25,7 @@ app.include_router(participants.router, prefix="/api")
 app.include_router(springs.router, prefix="/api")
 app.include_router(logs.router, prefix="/api")
 app.include_router(milestones.router, prefix="/api")
+app.include_router(checkins.router, prefix="/api")
 app.include_router(admin.router)
 
 @app.get("/api")

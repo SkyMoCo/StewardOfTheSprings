@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="#17252A"/>
+  <!-- Mountain silhouette -->
+  <polygon points="256,90 420,380 92,380" fill="#2B7A78"/>
+  <!-- Snow / peak highlight -->
+  <polygon points="256,90 294,158 218,158" fill="#DEF2F1"/>
+  <!-- Hot spring pool -->
+  <ellipse cx="256" cy="390" rx="145" ry="36" fill="#3AAFA9" opacity="0.85"/>
+  <!-- Water ripple -->
+  <ellipse cx="256" cy="390" rx="90" ry="22" fill="none" stroke="#DEF2F1" stroke-width="4" opacity="0.5"/>
+  <!-- Steam wisps -->
+  <path d="M200,62 Q207,42 214,62" stroke="#DEF2F1" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M249,50 Q256,30 263,50" stroke="#DEF2F1" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.75"/>
+  <path d="M298,62 Q305,42 312,62" stroke="#DEF2F1" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.75"/>
+</svg>
